@@ -25,7 +25,7 @@ fs.readFile(link, 'utf-8', (erro, texto) => {
         contaPalavras(texto)
     } catch(erro){
         //dessa forma exibe o stack trace -> por onde ele passou ate chegar no erro, informação mais completa do que somente apontar o que é o erro. 'trataErros(erro)'
-        trataErros(erro)
+       console.log(trataErros(erro)) 
     }
 })
 
