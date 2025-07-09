@@ -1,4 +1,5 @@
-function trataErro(erro){
+//exportação padrão, uma unica função que sera usada
+export default function trataErro(erro){
 
     if(erro.code === 'ENOENT'){
         throw new Error('Arquivo não encontrado, verifique o caminho informado.')
@@ -9,4 +10,5 @@ function trataErro(erro){
 
 }
 //exportando função para ser usada como módulo ou seja trataErro(erro) em outro arquivo
-module.exports = trataErro;
+//module.exports = trataErro;
+

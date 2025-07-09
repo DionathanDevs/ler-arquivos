@@ -1,42 +1,16 @@
 //biblioteca reutilizavel que resolve unm problema ou necessidade
 //qlq pessoa
 
-
-// chamando módulo do FileSystem, para interagir com os arquivos acessar/alterar/ler
-const fs = require('fs');
-
-
-const trataErros = require('../erros/trataErros.js')
-
-// const que armazena em array o caminho para o arquivo atual lerArquivos.js, e passamos um outro caminho na hora de executar o codigo no terminal, nesse caso utilizar ../arquivos/arquivo.txt
-const arquivoCaminho = process.argv;
-
-//salvando o retorno do caminho digitado no terminal, no caso é o array do index 2
-
-const link = arquivoCaminho[2]
-
-
-//função do módulo filesystem, chamamos o módulo e a função de ler arquivo, passamos primeiro o caminho do arquivo, nesse caso a const link, depois disso codificacao dos caracteres e depois arrow function callback passamos os parametros err, data -> caso der err, e data o texto do arquivo
-fs.readFile(link, 'utf-8', (erro, texto) => {
-    
-    try {
-        //mandando o erro para frente com throw, sem o throw eu nao consigo passar para o catch o erro captado pelo parametro da funcao readfile
-        if(erro) throw erro
-        contaPalavras(texto)
-    } catch(erro){
-        //dessa forma exibe o stack trace -> por onde ele passou ate chegar no erro, informação mais completa do que somente apontar o que é o erro. 'trataErros(erro)'
-       console.log(trataErros(erro)) 
-    }
-})
-
-function contaPalavras(texto) {
+// exportando do função de contar palavras
+export function contaPalavras(texto) {
+    //chamamos a funcao de separar por paragrafos
     const paragrafos = extraiParagrafos(texto)
-    //metodo flat 
+    //metodo flat - filtramos e utilizamos o map pra armazernar em contagem o novo array com os filtros sem objetos com espaço ou \r na verificação, se verdadeiro retorna array vazio, ou seja nada, apos isso chamamos a função de verificar as palavras do paragrafo para ver se tem alguma duplicada.
     const contagem = paragrafos.flatMap((paragrafo) => {
         if (paragrafo == '\r' || '') return [];
         return verificarDuplicadas(paragrafo)
     })
-
+    //exibir o array de objetos
     console.log(contagem)
 }
 
