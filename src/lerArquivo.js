@@ -10,8 +10,10 @@ export function contaPalavras(texto) {
         if (paragrafo == '\r' || '') return [];
         return verificarDuplicadas(paragrafo)
     })
-    //exibir o array de objetos
-    console.log(contagem)
+    //exibir o array de objetos no console
+    //console.log(contagem)
+
+    return contagem;
 }
 
 function extraiParagrafos(texto) {
