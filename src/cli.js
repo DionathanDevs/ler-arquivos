@@ -1,9 +1,11 @@
 import fs from 'fs'
 // chamando módulo do FileSystem, para interagir com os arquivos acessar/alterar/ler
 //const fs = require('fs');
-
-import trataErro from './erros/trataErros.js';
 //import para chamar o modulo trata erro
+import trataErro from './erros/trataErros.js';
+
+import { montarSaidaArquivo } from './helpers.js';
+
 //const trataErros = require('./erros/trataErros.js')
 import { contaPalavras } from './lerArquivo.js';
 // const que armazena em array o caminho para o arquivo atual lerArquivos.js, e passamos um outro caminho na hora de executar o codigo no terminal, nesse caso utilizar ../arquivos/arquivo.txt
@@ -33,7 +35,7 @@ fs.readFile(link, 'utf-8', (erro, texto) => {
 async function criaESalvaArquivo(listaPalavras, endereco){
 
     const arquivoNovo = `${endereco}/resultado.txt`;
-    const textoPalavras = JSON.stringify(listaPalavras);
+    const textoPalavras = montarSaidaArquivo(listaPalavras)
 
     try {
         //retorna uma promessa, espera a resposta desse comando e segue o programa enquanto esse dado nao retorna
