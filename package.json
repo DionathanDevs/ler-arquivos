@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/DionathanDevs/ler-arquivos/issues"
   },
-  "homepage": "https://github.com/DionathanDevs/ler-arquivos#readme"
+  "homepage": "https://github.com/DionathanDevs/ler-arquivos#readme",
+  "dependencies": {
+    "commander": "^14.0.0"
+  }
 }
