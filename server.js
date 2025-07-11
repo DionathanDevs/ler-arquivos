@@ -31,7 +31,8 @@ app.post('/upload', upload.single('arquivo'), async (req, res) => {
     }
 
 });
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () =>{
-    console.log('Servidor roteando em http://localhost:3000');
+app.listen(PORT, () =>{
+    console.log(`Servidor roteando na porta ${PORT}`);
 })

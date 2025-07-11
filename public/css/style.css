@@ -1,3 +1,178 @@
-.btn-download{
-    width: 500px; background-color: aqua
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+h2 {
+    color: rgb(32, 32, 32);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+.dropzone {
+    border: 2px dashed rgba(32, 32, 32, 0.452);
+    text-align: center;
+    color: rgba(32, 32, 32, 0.63);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 300px;
+    width: 600px;
+    font-size: white;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.box-entry {
+    width: 600px;
+    height: 600px;
+    margin-top: 3em;
+}
+
+.title-main {
+    font-family: "Josefin Sans", sans-serif;
+    color: #ff6600;
+    background-color: transparent;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 0.9em;
+    width: 200px;
+    height: 100px;
+}
+
+.title-main i {
+    color: white;
+}
+
+.title-entry {
+    font-weight: 600;
+    color: white;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-entry {
+    font-weight: 400;
+    color: #ccc;
+    font-size: 20px;
+    line-height: 1.2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.img-doc {
+    width: 500px;
+    height: 500px;
+    color: #ff6600;
+}
+
+.dropzone i {
+    font-size: 70px;
+    color: #ff6600;
+}
+
+.dropzone p {
+
+    width: 100%;
+    height: 20px;
+    border: 1px solid white;
+}
+
+.container {
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6em;
+}
+
+form {
+    border-radius: 1em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 800px;
+    height: 800px;
+    background-color: white;
+}
+
+#arquivoInput {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+#botaoPersonalizado {
+    text-align: center;
+    background-color: #807d7c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+#botaoPersonalizado:hover {
+    background-color: #636363ec;
+
+    color: white;
+}
+
+.nome-arquivo {
+    width: 50%;
+}
+
+.btn-enviar {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: 1px solid #ff6600;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    transition: 0.3s;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.arquivoInserido {
+    width: 50%;
+    height: 100px;
+
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.btn-download {
+
+    width: 50%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
 }

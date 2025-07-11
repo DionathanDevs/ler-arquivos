@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de Palavras</title>
+    <title>Busque por Palavras Repetidas</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <section id="container" class="container">
-        <h1>Enviar arquivo de texto</h1>
+        <div class="box-entry">
+            <span class="title-main">ENCONTRE <i class="fa-solid fa-magnifying-glass"></i><span>
+                    <p class="title-entry">Palavras</p>
+                    <p class="text-entry">Encontre palavras repetidas em seu arquivo de texto de forma fácil e rápida.
+                    </p>
+                    <img src="./img/docs.svg" alt="" class="img-doc"></img>
+        </div>
         <form id="formulario" enctype="multipart/form-data">
-            <input type="file" name="arquivo" accept=".txt" required>
-            <button type="submit">Processar</button>
+            <h2>Enviar arquivo de texto</h2>
+            <div id="dropzone" class="dropzone">
+                <p>Arraste o arquivo aqui ou clique para selecionar </p>
+                <i class="fa-solid fa-file-arrow-up"></i>
+            </div>
+            <input type="file" id="arquivoInput" name="arquivo" />
+            <label for="arquivoInput" id="botaoPersonalizado">Selecionar Arquivo</label>
+            <div class="arquivoInserido">
+                <div id="resultado"></div>
+                <span id="nomeArquivo" class="nome-arquivo">Nenhum arquivo selecionado</span>
+            </div>
+            <button type="submit" class="btn-enviar">Processar Arquivo</button>
         </form>
-        <div id="resultado"></div>
     </section>
     <script src="./js/uploadArquivo.js"></script>
 </body>
+
 </html>
