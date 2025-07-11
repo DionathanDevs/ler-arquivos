@@ -18,6 +18,9 @@ app.post('/upload', upload.single('arquivo'), async (req, res) => {
     const entrada = req.file.path;
     const destino = path.join(__dirname, 'resultados');
 
+    if (!fs.existsSync(destino)) {
+        fs.mkdirSync(destino, { recursive: true });
+    }
 
     try{
         const resultadoPath = await processaArquivo(entrada, destino);
