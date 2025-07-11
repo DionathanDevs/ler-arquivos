@@ -54,7 +54,6 @@ fs.readFile(texto, 'utf-8', (erro, texto) => {
         console.log(trataErro(erro))
     }
 })
-
 }
 
 

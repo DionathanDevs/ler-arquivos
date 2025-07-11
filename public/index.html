@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Palavras</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section id="container" class="container">
+        <h1>Enviar arquivo de texto</h1>
+        <form id="formulario" enctype="multipart/form-data">
+            <input type="file" name="arquivo" accept=".txt" required>
+            <button type="submit">Processar</button>
+        </form>
+        <div id="resultado"></div>
+    </section>
+    <script src="./js/uploadArquivo.js"></script>
+</body>
+</html>

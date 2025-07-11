@@ -1,9 +1,0 @@
-Palavras duplicadas no parágrafo 1: Nenhuma palavra duplicada.
-Palavras duplicadas no parágrafo 2: Nenhuma palavra duplicada.
-Palavras duplicadas no parágrafo 3: uma 
-Palavras duplicadas no parágrafo 4: em 
-Palavras duplicadas no parágrafo 5: Nenhuma palavra duplicada.
-Palavras duplicadas no parágrafo 6: Nenhuma palavra duplicada.
-Palavras duplicadas no parágrafo 7: dispositivos, à, web, seu, conectado, ou 
-Palavras duplicadas no parágrafo 8: cliente, uma, do, para 
-Palavras duplicadas no parágrafo 9: Nenhuma palavra duplicada.
