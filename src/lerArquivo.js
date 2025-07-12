@@ -36,10 +36,13 @@ function verificarDuplicadas(texto) {
 
     //utilizamos foreach no arraypalavras, para cada elemento do array, adicionar no objeto e realizar a contagem.
     arrayPalavras.forEach(palavra => {
-        //chamando a funcao limpar palavra, armazenando na constante, limpando tambem os espaços no final ou \r
-        const palavraLimpa = limpaPalavra(palavra).trim()
+        if(palavra != ""){
+            const palavraLimpa = limpaPalavra(palavra).trim()
         //se existir um valor ele soma + 1, se não existir é undefined, null, 0, false, etc., ele usa o 0 + 1.
-        resultado[palavraLimpa] = (resultado[palavraLimpa] || 0) + 1;
+            resultado[palavraLimpa] = (resultado[palavraLimpa] || 0) + 1;
+        }
+        //chamando a funcao limpar palavra, armazenando na constante, limpando tambem os espaços no final ou \r
+        
 
     });
 

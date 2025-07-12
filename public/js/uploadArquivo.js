@@ -64,8 +64,8 @@ document.getElementById('formulario').addEventListener('submit', async (e) => {
 
     document.getElementById('resultado').appendChild(link)
 
-    const input = document.getElementById('arquivoInput');
-    const nome = document.getElementById('nomeArquivo');
+    // const input = document.getElementById('arquivoInput');
+    // const nome = document.getElementById('nomeArquivo');
 
 });
 
